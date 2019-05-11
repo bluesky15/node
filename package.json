@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/erlalitkumar/node#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.4"
   }
 }
