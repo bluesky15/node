@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 4200
 const upload = require('express-fileupload')
 //const http = require('http').Server(app).listen(port)
 app.use(upload())
-app.use(express.static('public'))
+app.use(express.static(__dirname+'/../public'))
 app.post('/', (req, res) => {
     if (req.files) {
         var file = req.files.filename,
