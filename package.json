@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon --exec babel-node src/server.js",
+    "bb": "babel src --out-dir dist",
+    "serve": "node dist/server.js",
     "build": " cd client && npm run clean && npm run build && cd ..",
     "start_server": "node src/app.js",
     "start_client": "cd client && npm start && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "debug":"node --nolazy --inspect-brk=9229 src/app.js"
+    "debug": "node --nolazy --inspect-brk=9229 src/app.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +27,12 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "express-fileupload": "^1.1.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.4",
+    "nodemon": "^1.19.0"
   }
 }
