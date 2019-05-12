@@ -1,11 +1,13 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const port = 4200
 const upload = require('express-fileupload')
+app.use(cors())
 //const http = require('http').Server(app).listen(port)
 app.use(upload())
 app.use(express.static(__dirname+'/../public'))
-app.post('/', (req, res) => {
+app.post('/upload', (req, res) => {
     if (req.files) {
         var file = req.files.filename,
             filename = file.name
@@ -14,7 +16,7 @@ app.post('/', (req, res) => {
                 console.log(err)
                 res.send("file upload error!!")
             } else {
-                res.send("Done!")
+                res.json({"status": "success"});
             }
         })
     }
