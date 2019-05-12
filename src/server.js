@@ -1,12 +1,14 @@
 import express from "express"
-//const express = require('express')
-const cors = require('cors')
+import cors from "cors"
+import upload from "express-fileupload"
+
 const app = express()
 const port = 4200
-const upload = require('express-fileupload')
+
 app.use(cors())
-//const http = require('http').Server(app).listen(port)
+
 app.use(upload())
+
 app.use(express.static(__dirname+'/../public'))
 app.post('/upload', (req, res) => {
     if (req.files) {
@@ -22,5 +24,5 @@ app.post('/upload', (req, res) => {
         })
     }
 })
-//console.log(__dirname);
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
