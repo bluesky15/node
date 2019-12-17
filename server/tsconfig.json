@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+      "alwaysStrict": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "target": "es2016",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "outDir": "dist"
+  }
+}
