@@ -1,8 +1,8 @@
 import { Request, Response, Application } from 'express';
-import express = require('express');
+import express from 'express';
+import path from 'path'
 
-var path = require('path');
-var app: Application = express();
+const app: Application = express();
 app.use(express.static(path.join(__dirname+'/../../client/build')))
 const port = 3000;
 app.get('/', (req, res) => {
