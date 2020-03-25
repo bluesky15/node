@@ -1,0 +1,21 @@
+.DottedBox {
+    margin: 40px;
+    border: 5px dotted pink;
+  }
+  
+  .DottedBox_content {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .example_a {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ed3330;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+    }
